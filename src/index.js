@@ -37,13 +37,13 @@ document.addEventListener("DOMContentLoaded", () => {
         e.stopPropagation()
         toy.likes+=1
         div.querySelector('p').innerText=`${toy.likes} Likes`
-        updateToyDb(toy)
+        updateToyDbLikes(toy)
       })
     })
   }
 
   //update functions
-  async function updateToyDb(toyObj){
+  async function updateToyDbLikes(toyObj){
     const configObj = {
       method: 'PATCH',
       headers:{
